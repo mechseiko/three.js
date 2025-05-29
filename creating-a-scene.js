@@ -25,14 +25,14 @@ document.body.appendChild(renderer.domElement);
 // Aspect ratio = window.innerWidth / window.innerHeight
 // const camera = new THREE.PerspectiveCamera(field of View(FOV), aspect ratio, near clipping plane, far clipping plane);
 // To render the cube using the BoxGeometry:
-const geometry = new THREE.BoxGeometry(2, 2, 2);
+const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
 
 
 
                 // MOST IMPORTANT LINES OF CODE
                     const cube = new THREE.Mesh(geometry, material);
-                    // scene.add( cube );
+                    scene.add( cube );
 
 
 
@@ -43,8 +43,8 @@ camera.position.z = 5;
 // Finally
 // To render something to the page using a render/animation loop
 const animate = () => {
-    cube.rotation.x += 1;
-    cube.rotation.y += 1;
+    cube.rotation.x += .01;
+    cube.rotation.y += .01;
     renderer.render(scene, camera);
 }
 renderer.setAnimationLoop( animate );
