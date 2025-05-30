@@ -29,9 +29,9 @@ const material = new THREE.MeshBasicMaterial({color: 0x00ff00});
 
 
 
-                // MOST IMPORTANT LINES OF CODE
-                    const cube = new THREE.Mesh(geometry, material);
-                    scene.add( cube );
+            // MOST IMPORTANT LINES OF CODE
+                const cube = new THREE.Mesh(geometry, material);
+                scene.add( cube );
 
 
 
